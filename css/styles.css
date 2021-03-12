@@ -125,7 +125,6 @@ img {
   display: flex;
   align-items: center;
   margin-left: auto;
-  /* margin-right: 50px; */
 }
 
 .tel-link {
@@ -186,16 +185,48 @@ img {
   color: var(--accent-color);
 }
 
+.mail-link:hover .contact-icon,
+.mail-link:focus .contact-icon {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
 .tel-link:hover,
 .tel-link:focus {
   color: var(--accent-color);
 }
+
+.tel-link:hover .contact-icon,
+.tel-link:focus .contact-icon {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.contact-icon {
+  margin-right: 10px;
+  align-items: center;
+  fill: #757575;
+}
+
 /* ============= END HEADER ============= */
 
 /* ============= HERO ============= */
 .hero {
   padding: 200px 0;
   text-align: center;
+  background-image: linear-gradient(
+      to left,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg_hero.jpg);
+  background-color: #c4c4c4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -217,6 +248,17 @@ img {
   padding: 94px 0;
 }
 
+.icon {
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-left: 30px;
+}
+
 .features-title {
   font-weight: 700;
   font-size: 14px;
@@ -225,6 +267,10 @@ img {
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 10px;
+}
+
+.features :not(:first-child) {
+  margin-left: 30px;
 }
 
 .features-section .features {
@@ -305,7 +351,7 @@ img {
 }
 
 .name-position {
-  padding: 30px 0;
+  padding: 30px 32px;
 }
 
 .team-position {
@@ -314,7 +360,7 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-
+  margin-bottom: 16px;
   color: #757575;
 }
 
@@ -324,7 +370,71 @@ img {
   background-color: #ffffff;
 }
 
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+}
+.icon-items-link {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.team-icons {
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-list-items:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-items-link:hover,
+.icon-items-link:focus {
+  background: #188ce8;
+  border-radius: 50%;
+}
+
+.icon-items-link:hover .team-icons,
+.icon-items-link:focus .team-icons {
+  fill: white;
+}
 /* ============ END TEAM ============= */
+/* ============ CLIENTS ============= */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-icon {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.clients-link .clients-icon:focus,
+.clients-link .clients-icon:hover {
+  fill: #188ce8;
+  border: 1px solid #188ce8;
+}
+/* ============ END CLIENTS ============= */
 
 /* ============ FOOTER ============= */
 .mail-link-footer,
@@ -360,6 +470,24 @@ img {
 .footer .logo-link {
   display: block;
   margin-bottom: 20px;
+}
+
+.social-title {
+  font-family: var(--mainfont);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.footer .container {
+  display: flex;
+}
+.social-footer {
+  margin-left: 70px;
 }
 /* ============ END FOOTER ============= */
 
@@ -441,4 +569,9 @@ img {
   border-top: none;
 }
 
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /* ============ END PORTFOLIO ============= */
